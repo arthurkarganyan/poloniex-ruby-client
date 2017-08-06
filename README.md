@@ -1,16 +1,9 @@
 ## Usage
 
-All methods provided by ```Poloniex``` are class methods, and are of the same name as the api ( except that "return"s have been removed ).
-
-For example, ```https://www.poloniex.com/public?command=returnTicker``` is written as ```Poloniex.ticker```
-
-The Poloniex module accepts a setup block for configuration:
+All methods provided by ```Poloniex::Client``` are class methods, and are of the same name as the api ( except that "return"s have been removed ).
 
 ```
-Poloniex.setup do | config |
-    config.key = 'my api key'
-    config.secret = 'my secret token'
-end
+Poloniex::Client.ticker
 ```
 
 GET requests ( to /public ) do not need authentication, and therefor do not need Poloniex to be configured.
