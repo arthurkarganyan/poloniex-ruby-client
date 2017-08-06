@@ -16,6 +16,11 @@ module Poloniex
     yield( configuration )
   end
 
+  self.setup do |config|
+    config.key = ENV["POLONIEX_KEY"] || fail("POLONIEX_KEY variable not defined")
+    config.secret = ENV["POLONIEX_SECRET"] || fail("POLONIEX_SECRET variable not defined")
+  end
+
   class Configuration
     attr_accessor :key, :secret
 
