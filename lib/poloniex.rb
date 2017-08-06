@@ -1,4 +1,6 @@
 require "poloniex/version"
+require "poloniex/client"
+
 require 'rest-client'
 require 'openssl'
 require 'addressable/uri'
